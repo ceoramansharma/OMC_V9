@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+
+# Crawl-delay for optimal server performance
+Crawl-delay: 1
+
+# XML Sitemaps prioritizing primary keywords (states, cities, services)
+Sitemap: https://onlinemmjcard.com/sitemap.xml

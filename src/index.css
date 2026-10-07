@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  /* Prevent duplicate static WordPress PHP header, banner, progress bar, breadcrumbs, or footer when React SPA is mounted */
+  body.online-mmj-spa-active > .online-mmj-static-progress,
+  body.online-mmj-spa-active > .online-mmj-static-banner,
+  body.online-mmj-spa-active > .online-mmj-static-header,
+  body.online-mmj-spa-active > .online-mmj-static-footer,
+  body.online-mmj-spa-active > .mmj-breadcrumbs,
+  body.online-mmj-spa-active .mmj-breadcrumbs,
+  body.online-mmj-spa-active > header.online-mmj-header,
+  body.online-mmj-spa-active > header.site-header,
+  body.online-mmj-spa-active > footer.site-footer,
+  body.online-mmj-spa-active #mmj-scroll-progress,
+  body.online-mmj-spa-active > div.bg-slate-50:not(#online-mmj-card-root) {
+    display: none !important;
+  }
+
+  /* Hide any static WordPress PHP content containers when React SPA is active */
+  body.online-mmj-spa-active #main-content,
+  body.online-mmj-spa-active .site-main,
+  body.online-mmj-spa-active article.entry-location-page,
+  body.online-mmj-spa-active article.entry-state-page,
+  body.online-mmj-spa-active article.entry-service-page,
+  body.online-mmj-spa-active article.entry-condition-page,
+  body.online-mmj-spa-active article.entry-page {
+    display: none !important;
+  }
+
+  /* Zero out padding and constraints when mounting React inside WordPress template containers */
+  body.online-mmj-spa-active main,
+  body.online-mmj-spa-active article,
+  body.online-mmj-spa-active .entry-content {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    border: none !important;
+    background: transparent !important;
+  }
+
+  /* WordPress Admin Bar Compatibility */
+  body.admin-bar header.sticky,
+  .admin-bar header.sticky,
+  .admin-bar #online-mmj-card-root header {
+    top: 32px !important;
+  }
+  @media screen and (max-width: 782px) {
+    body.admin-bar header.sticky,
+    .admin-bar header.sticky,
+    .admin-bar #online-mmj-card-root header {
+      top: 46px !important;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Online MMJ Card",
+  "description": "Get your legal medical marijuana card online in 15 mins with board-certified MMJ doctors. Fast 420 evaluations, medical cannabis card renewals & 99% approval guaranteed.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
